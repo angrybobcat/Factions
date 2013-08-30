@@ -29,7 +29,8 @@ public class AutoLeaveProcessTask extends BukkitRunnable
 		this.finished = false;
 	}
 
-	public void run()
+	@Override
+    public void run()
 	{
 		if (Conf.autoLeaveAfterDaysOfInactivity <= 0.0 || Conf.autoLeaveRoutineMaxMillisecondsPerTick <= 0.0)
 		{

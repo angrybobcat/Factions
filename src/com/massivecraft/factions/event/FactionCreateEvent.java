@@ -39,7 +39,8 @@ public class FactionCreateEvent extends Event implements Cancellable
 		return factionTag;
 	}
 
-	public HandlerList getHandlers() 
+	@Override
+    public HandlerList getHandlers() 
 	{
 		return handlers;
 	}

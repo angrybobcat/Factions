@@ -13,7 +13,8 @@ public class AutoLeaveTask implements Runnable
 		this.rate = Conf.autoLeaveRoutineRunsEveryXMinutes;
 	}
 
-	public synchronized void run()
+	@Override
+    public synchronized void run()
 	{
 		if (task != null && ! task.isFinished())
 			return;

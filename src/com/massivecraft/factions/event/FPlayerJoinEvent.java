@@ -38,7 +38,8 @@ public class FPlayerJoinEvent extends Event implements Cancellable
 	{
 		return reason;	
 	}
-	public HandlerList getHandlers() 
+	@Override
+    public HandlerList getHandlers() 
 	{
 		return handlers;
 	}

@@ -26,7 +26,8 @@ public class LandUnclaimEvent extends Event implements Cancellable
 		fplayer = p;
 	}
 
-	public HandlerList getHandlers() 
+	@Override
+    public HandlerList getHandlers() 
 	{
 		return handlers;
 	}

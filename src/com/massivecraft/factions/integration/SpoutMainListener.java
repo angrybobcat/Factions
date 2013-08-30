@@ -205,7 +205,7 @@ public class SpoutMainListener implements Listener
 	}
 	public void alignLabel(GenericLabel label, String text, int alignment)
 	{
-		int labelWidth = (int)((float)GenericLabel.getStringWidth(text) * Conf.spoutTerritoryDisplaySize);
+		int labelWidth = (int)(GenericLabel.getStringWidth(text) * Conf.spoutTerritoryDisplaySize);
 		if (labelWidth > SCREEN_WIDTH)
 		{
 				label.setX(0);

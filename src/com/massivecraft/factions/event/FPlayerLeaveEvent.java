@@ -27,7 +27,8 @@ public class FPlayerLeaveEvent extends Event implements Cancellable
 		reason = r;
 	}
 
-	public HandlerList getHandlers() 
+	@Override
+    public HandlerList getHandlers() 
 	{
 		return handlers;
 	}

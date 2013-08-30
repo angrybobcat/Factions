@@ -262,7 +262,7 @@ public class TextUtil
 	{
 		String ret = "";
 		
-		double millisLeft = (double) Math.abs(millis);
+		double millisLeft = Math.abs(millis);
 		
 		List<String> unitCountParts = new ArrayList<String>();
 		for (Entry<String, Long> entry : unitMillis.entrySet())

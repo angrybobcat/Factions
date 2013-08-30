@@ -196,10 +196,15 @@ public class Conf
     public final transient static Set<Material> materialsDoor = EnumSet.noneOf(Material.class);
     public final transient static Set<Material> materialsContainer = EnumSet.noneOf(Material.class);
 
-    public static Set<Material> territoryProtectedMaterials = EnumSet.noneOf(Material.class);
-    public static Set<Material> territoryDenyUseageMaterials = EnumSet.noneOf(Material.class);
-    public static Set<Material> territoryProtectedMaterialsWhenOffline = EnumSet.noneOf(Material.class);
-    public static Set<Material> territoryDenyUseageMaterialsWhenOffline = EnumSet.noneOf(Material.class);
+    public final transient static Set<Material> territoryProtectedMaterials = EnumSet.noneOf(Material.class);
+    public final transient static Set<Material> territoryDenyUseageMaterials = EnumSet.noneOf(Material.class);
+    public final transient static Set<Material> territoryProtectedMaterialsWhenOffline = EnumSet.noneOf(Material.class);
+    public final transient static Set<Material> territoryDenyUseageMaterialsWhenOffline = EnumSet.noneOf(Material.class);
+
+    public final transient static Set<Material> territoryAllowedMaterials = EnumSet.noneOf(Material.class);
+    public final transient static Set<Material> territoryAllowUseageMaterials = EnumSet.noneOf(Material.class);
+    public final transient static Set<Material> territoryAllowedMaterialsWhenOffline = EnumSet.noneOf(Material.class);
+    public final transient static Set<Material> territoryAllowUseageMaterialsWhenOffline = EnumSet.noneOf(Material.class);
 
     // TODO: Rename to monsterCreatureTypes
     public static transient Set<EntityType> monsters = EnumSet.noneOf(EntityType.class);
@@ -357,6 +362,20 @@ public class Conf
         territoryDenyUseageMaterialsWhenOffline.add(Material.BUCKET);
         territoryDenyUseageMaterialsWhenOffline.add(Material.WATER_BUCKET);
         territoryDenyUseageMaterialsWhenOffline.add(Material.LAVA_BUCKET);
+
+        territoryAllowedMaterials.add(Material.WOODEN_DOOR);
+        territoryAllowedMaterials.add(Material.CHEST);
+        territoryAllowedMaterials.add(Material.LEVER);
+        territoryAllowedMaterials.add(Material.WOOD_PLATE);
+        territoryAllowedMaterials.add(Material.WOOD_BUTTON);
+
+        territoryAllowUseageMaterials.add(Material.LAVA_BUCKET);
+        territoryAllowUseageMaterials.add(Material.WATER_BUCKET);
+
+        territoryAllowedMaterialsWhenOffline.add(Material.WOODEN_DOOR);
+        territoryAllowedMaterialsWhenOffline.add(Material.CHEST);
+
+        territoryAllowUseageMaterialsWhenOffline.add(Material.BUCKET);
 
         materialsContainer.add(Material.DISPENSER);
         materialsContainer.add(Material.CHEST);

@@ -154,6 +154,7 @@ public class Faction extends Entity implements EconomyParticipator
     // Bank functions
     public double money;
 
+    @Override
     public String getAccountId()
     {
         String aid = "faction-" + this.getId();
@@ -643,6 +644,7 @@ public class Faction extends Entity implements EconomyParticipator
     //----------------------------------------------//
     // Messages
     //----------------------------------------------//
+    @Override
     public void msg(String message, Object... args)
     {
         message = P.p.txt.parse(message, args);
@@ -710,6 +712,7 @@ public class Faction extends Entity implements EconomyParticipator
     /**
      * @deprecated As of release 1.7, replaced by {@link #getFPlayerLeader()}
      */
+    @Deprecated
     public FPlayer getFPlayerAdmin()
     {
         return getFPlayerLeader();
@@ -718,6 +721,7 @@ public class Faction extends Entity implements EconomyParticipator
     /**
      * @deprecated As of release 1.7, replaced by {@link #getFlag()}
      */
+    @Deprecated
     public boolean isPeaceful()
     {
         return this.getFlag(FFlag.PEACEFUL);
@@ -726,6 +730,7 @@ public class Faction extends Entity implements EconomyParticipator
     /**
      * @deprecated As of release 1.7, replaced by {@link #getFlag()}
      */
+    @Deprecated
     public boolean getPeacefulExplosionsEnabled()
     {
         return this.getFlag(FFlag.EXPLOSIONS);
@@ -734,6 +739,7 @@ public class Faction extends Entity implements EconomyParticipator
     /**
      * @deprecated As of release 1.7, replaced by {@link #getFlag()}
      */
+    @Deprecated
     public boolean noExplosionsInTerritory()
     {
         return !this.getFlag(FFlag.EXPLOSIONS);
@@ -742,6 +748,7 @@ public class Faction extends Entity implements EconomyParticipator
     /**
      * @deprecated As of release 1.7, replaced by {@link #getFlag()}
      */
+    @Deprecated
     public boolean isSafeZone()
     {
         return !this.getFlag(FFlag.EXPLOSIONS);

@@ -85,7 +85,7 @@ public class EssentialsFeatures
 	{
 		if ( ! Conf.homesTeleportCommandEssentialsIntegration || essentials == null) return false;
 
-		Teleport teleport = (Teleport) essentials.getUser(player).getTeleport();
+		Teleport teleport = essentials.getUser(player).getTeleport();
 		Trade trade = new Trade(Conf.econCostHome, essentials);
 		try
 		{

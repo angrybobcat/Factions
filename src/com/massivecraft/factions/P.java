@@ -201,7 +201,7 @@ public class P extends MPlugin
 			Conf.econLandRewardTaskRunsEveryXMinutes > 0.0 &&
 			Conf.econLandReward > 0.0)
 		{
-			long ticks = (long)(20 * 60 * Conf.econLandRewardTaskRunsEveryXMinutes);
+			long ticks = (20 * 60 * Conf.econLandRewardTaskRunsEveryXMinutes);
 			econLandRewardTaskID = getServer().getScheduler().scheduleSyncRepeatingTask(this, new EconLandRewardTask(), ticks, ticks);
 		}
 	}
@@ -251,7 +251,8 @@ public class P extends MPlugin
 	/**
 	 * @deprecated  As of release 1.8, there is no built in faction chat.
 	 */
-	public boolean isPlayerFactionChatting(Player player)
+	@Deprecated
+    public boolean isPlayerFactionChatting(Player player)
 	{
 		return false;
 	}
@@ -260,7 +261,8 @@ public class P extends MPlugin
 	/**
 	 * @deprecated As of release 1.8.1 the normal Bukkit command-handling is used. 
 	 */
-	public boolean isFactionsCommand(String check)
+	@Deprecated
+    public boolean isFactionsCommand(String check)
 	{
 		return false;
 	}

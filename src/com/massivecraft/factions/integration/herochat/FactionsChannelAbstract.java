@@ -177,7 +177,8 @@ public abstract class FactionsChannelAbstract implements Channel
 		{
 			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Herochat.getPlugin(), new Runnable()
 			{
-				public void run()
+				@Override
+                public void run()
 				{
 					try
 					{
@@ -245,7 +246,8 @@ public abstract class FactionsChannelAbstract implements Channel
 		{
 			Bukkit.getServer().getScheduler().scheduleSyncDelayedTask(Herochat.getPlugin(), new Runnable()
 			{
-				public void run()
+				@Override
+                public void run()
 				{
 					try
 					{
@@ -366,7 +368,8 @@ public abstract class FactionsChannelAbstract implements Channel
 		}
 	}
 	
-	public boolean equals(Object other)
+	@Override
+    public boolean equals(Object other)
 	{
 		if (other == this) return true;
 		if (other == null) return false;
@@ -375,7 +378,8 @@ public abstract class FactionsChannelAbstract implements Channel
 		return (this.getName().equalsIgnoreCase(channel.getName())) || (this.getName().equalsIgnoreCase(channel.getNick()));
 	}
 
-	public int hashCode()
+	@Override
+    public int hashCode()
 	{
 		int prime = 31;
 		int result = 1;

@@ -100,7 +100,8 @@ public class FPlayer extends PlayerEntity implements EconomyParticipator
 	private transient boolean loginPvpDisabled;
 	
 	// FIELD: account
-	public String getAccountId() { return this.getId(); }
+	@Override
+    public String getAccountId() { return this.getId(); }
 	
 	// -------------------------------------------- //
 	// Construct
@@ -691,7 +692,8 @@ public class FPlayer extends PlayerEntity implements EconomyParticipator
 		return false;
 	}
 	
-	public void msg(String str, Object... args)
+	@Override
+    public void msg(String str, Object... args)
 	{
 		this.sendMessage(P.p.txt.parse(str, args));
 	}

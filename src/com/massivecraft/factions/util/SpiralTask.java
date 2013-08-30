@@ -109,7 +109,8 @@ public abstract class SpiralTask implements Runnable
 		taskID = ID;
 	}
 
-	public final void run()
+	@Override
+    public final void run()
 	{
 		if (!this.valid() || !readyToGo) return;
 

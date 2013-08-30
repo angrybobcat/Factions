@@ -25,7 +25,8 @@ public class FactionDisbandEvent extends Event implements Cancellable
 		this.id = factionId;
 	}
 
-	public HandlerList getHandlers() 
+	@Override
+    public HandlerList getHandlers() 
 	{
 		return handlers;
 	}

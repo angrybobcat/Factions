@@ -12,7 +12,8 @@ public class SaveTask implements Runnable
 		this.p = p;
 	}
 	
-	public void run()
+	@Override
+    public void run()
 	{
 		if ( ! p.getAutoSave() || running) return;
 		running = true;

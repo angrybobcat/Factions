@@ -233,15 +233,18 @@ public class FactionsPlayerListener implements Listener
 
         Faction otherFaction = Board.getFactionAt(loc);
 
+        if (!otherFaction.isNormal())
+            return true;
+
         if (otherFaction.hasPlayersOnline())
         {
-            if (!Conf.territoryDenyUseageMaterials.contains(material))
-                return true; // Item isn't one we're preventing for online factions.
+            if (!Conf.territoryAllowUseageMaterials.contains(material))
+                return false; // Item isn't one we're preventing for online factions.
         }
         else
         {
-            if (!Conf.territoryDenyUseageMaterialsWhenOffline.contains(material))
-                return true; // Item isn't one we're preventing for offline factions.
+            if (!Conf.territoryAllowUseageMaterialsWhenOffline.contains(material))
+                return false; // Item isn't one we're preventing for offline factions.
         }
 
         FPlayer me = FPlayers.i.get(name);
@@ -275,13 +278,13 @@ public class FactionsPlayerListener implements Listener
         // We only care about some material types.
         if (otherFaction.hasPlayersOnline())
         {
-            if (!Conf.territoryProtectedMaterials.contains(material))
-                return true;
+            if (!Conf.territoryAllowedMaterials.contains(material))
+                return false;
         }
         else
         {
-            if (!Conf.territoryProtectedMaterialsWhenOffline.contains(material))
-                return true;
+            if (!Conf.territoryAllowedMaterialsWhenOffline.contains(material))
+                return false;
         }
         //<----------------------------
 

@@ -20,7 +20,8 @@ public class LandUnclaimAllEvent extends Event
 		fplayer = p;
 	}
 
-	public HandlerList getHandlers() 
+	@Override
+    public HandlerList getHandlers() 
 	{
 		return handlers;
 	}

@@ -84,7 +84,8 @@ public abstract class MPlugin extends JavaPlugin
 		log("=== ENABLE DONE (Took "+(System.currentTimeMillis()-timeEnableStart)+"ms) ===");
 	}
 	
-	public void onDisable()
+	@Override
+    public void onDisable()
 	{
 		if (saveTask != null)
 		{

@@ -75,7 +75,7 @@ public class TerritoryAccess implements JsonDeserializer<TerritoryAccess>, JsonS
 	public boolean doesHostFactionMatch(Object testSubject)
 	{
 		if (testSubject instanceof String)
-			return hostFactionID.equals((String)testSubject);
+			return hostFactionID.equals(testSubject);
 		else if (testSubject instanceof Player)
 			return hostFactionID.equals(FPlayers.i.get((Player)testSubject).getFactionId());
 		else if (testSubject instanceof FPlayer)

@@ -50,7 +50,8 @@ public class FactionRenameEvent extends Event implements Cancellable
 		return(tag);
 	}
 
-	public HandlerList getHandlers() 
+	@Override
+    public HandlerList getHandlers() 
 	{
 		return handlers;
 	}
